@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="films">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Test 6 </title>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    </head>
+    <!--para pruebas llamamos a getProcesosFilms y no a getFilms-->
+    <body ng-app="app" ng-controller="FilmsController" ng-init="getFilms()">
+
+        <!--mostramos los datos de java -->
+        <div class="container" ng-show="films != null">
+
+            <div class="col-md-13">
+                <table class="table">
+                    <thead>
+                        <tr>
+                           <th>Año</th>
+                           <th>Titulo</th>
+                           <th>Director</th>
+                        </tr>
+                    </thead>
+                    <tbody>			<tr ng-repeat="objetoLista in films">
+                            <td> {{objetoLista.year}}</td>
+                            <td>{{objetoLista.title}}</td>
+                            <td>{{objetoLista.director}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--<div class="film-info-bottom" ng-repeat="objetoLista in films">
+                        <h4><span> {{objetoLista.year}} - {{objetoLista.title}} - {{objetoLista.director}} </span></h4>
+                </div>-->
+            </div>
+
+            <br>
+            <br>
+            <div class="col-md-13">
+            <div class="form">
+                <label for="title">Título:</label>
+                <input id="title" ng-model="model.title" type="text" />
+
+                <label for="year">Año:</label>
+                <input id="year" ng-model="model.year" type="number" />
+
+                <label for="director">Director:</label>
+                <input id="director" ng-model="model.director" type="text" />
+
+                <button id="addBtn" class="btn" ng-click="addFilm()">Añadir película</button>
+            </div>
+            </div>
+            
+            <div class="col-md-13">
+                <h4>{{msg}}</h4>
+            </div>
+
+
+
+            <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.js"></script>
+            <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-resource.js"></script>
+
+            <script src="./resources/static/js/services.js"></script>
+            <!--definimos nuestras constantes -->
+            <!--<script type='text/javascript' src="./resources/static/js/constantesTest.js"></script>-->
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<div class="section">
+    <h3>{{headingTitle}}</h3>
+
+    
+    <div class="form">
+		<label for="title">Título:</label>
+		<input id="title" ng-model="title" type="text" />
+		
+		<label for="year">Año:</label>
+		<input id="year" ng-model="year" type="number" />
+		
+		<label for="director">Director:</label>
+		<input id="director" ng-model="director" type="text" />
+		
+		<button id="addBtn" class="btn" ng-click="addFilm()">Añadir película</button>
+	</div>
+
+    <div class="container" ng-init="getFilms()" ng-show="films != null">
+		<div class="film-info-bottom" ng-repeat="film in films">
+			PELIS: <h4><span> {{film.year}} - {{film.title}} - {{film.director}} </span></h4>
+		</div>
+	</div>
+</div>

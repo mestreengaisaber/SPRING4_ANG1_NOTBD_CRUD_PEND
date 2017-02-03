@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+   
+        <!--tenemos que usar un alias sino no lo pinta en la vista -->
+        <body ng-app="app" ng-controller="homeCtrl as home1">
+        <div>
+            URL: {{home1.test}}
+        </div>
+        <!--<body ng-app="myApp " >
+            
+           MENSAJE: {{mensaje}}-->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-resource.js"></script>
+        <script src="./resources/static/js/homeCtrl.js"></script>
+        <script src="./resources/static/js/ng-factories.js"></script>
+        
+        <script src="./resources/static/js/ng-app.js"></script>
+        <script src="./resources/static/js/ng-factories.js"></script>
+        <!--<script src="js/ng-directives.js"></script>-->
+        <script src="./resources/static/js/ng-controllers.js"></script>
+   
+    </body>
+</html>
